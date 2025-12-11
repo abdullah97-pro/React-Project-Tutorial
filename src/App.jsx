@@ -19,14 +19,27 @@
 //   return <Greeting name="React.js" />
 // }
 
-function Button({ onClick }) {
-  return <button onClick={onClick}>Click Me</button>;
-}
+// function Button({ onClick }) {
+//   return <button onClick={onClick}>Click Me</button>;
+// }
 
-function App() {
-  const handleClick = () => alert("Button clicked!");
-  return <Button onClick={handleClick} />;
-}
+// function App() {
+//   const handleClick = () => alert("Button clicked!");
+//   return <Button onClick={handleClick} />;
+// }
 
+
+import { useState } from "react";
+
+function App(){
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <p>Clicked {count}</p>
+      <button onClick={() => setCount(count + 3)}>Increase</button>
+    </>
+  )
+}
 
 export default App;
