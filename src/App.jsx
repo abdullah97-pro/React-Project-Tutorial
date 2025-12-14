@@ -1,3 +1,11 @@
+import Loginform from './components/LoginForm'
+function App() {
+  return (
+    <Loginform />
+  )
+}
+
+
 // function Greeting(props) {
 //   return <h1>Welcome to {props.name}</h1>
 // }
@@ -29,17 +37,23 @@
 // }
 
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function App(){
-  const [count, setCount] = useState(0);
+// function App(){
+//   const [count, setCount] = useState(0);
 
-  return (
-    <>
-      <p>Clicked {count}</p>
-      <button onClick={() => setCount(count + 3)}>Increase</button>
-    </>
-  )
-}
+//   return (
+//     <>
+//       <p>Clicked {count}</p>
+//       <button onClick={() => setCount(count + 3)}>Increase</button>
+//     </>
+//   )
+// }
+
+// import { useState } from "react";
+
+// function App() {
+
+// }
 
 export default App;
