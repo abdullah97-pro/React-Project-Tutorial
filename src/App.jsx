@@ -1,7 +1,18 @@
+import { useState } from 'react';
 import Loginform from './components/LoginForm'
+
+function Child ({value, onChange}) {
+  return <input value={value} onChange={e => onChange(e.target.value)} />
+}
 function App() {
+  const [text, setText] = useState("");
   return (
-    <Loginform />
+    // <Loginform />
+    <>
+      <h1>{text}</h1>
+
+      <Child value={text} onChange={setText} />
+    </>
   )
 }
 
