@@ -1,20 +1,34 @@
-import { useState } from 'react';
-import Loginform from './components/LoginForm'
 
-function Child ({value, onChange}) {
-  return <input value={value} onChange={e => onChange(e.target.value)} />
-}
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 function App() {
-  const [text, setText] = useState("");
   return (
-    // <Loginform />
     <>
-      <h1>{text}</h1>
-
-      <Child value={text} onChange={setText} />
+      <Header />
+      <Footer />
     </>
   )
 }
+
+
+// import { useState } from 'react';
+// import Loginform from './components/LoginForm'
+
+// function Child ({value, onChange}) {
+//   return <input value={value} onChange={e => onChange(e.target.value)} />
+// }
+// function App() {
+//   const [text, setText] = useState("");
+//   return (
+//     // <Loginform />
+//     <>
+//       <h1>{text}</h1>
+
+//       <Child value={text} onChange={setText} />
+//     </>
+//   )
+// }
 
 
 // function Greeting(props) {
