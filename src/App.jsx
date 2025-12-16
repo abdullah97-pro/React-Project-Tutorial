@@ -1,14 +1,32 @@
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Loginform from './components/LoginForm'
+
+function Card({title, children}) {
+  return (
+    <div className="card">
+      <h1>{title}</h1>
+      {children}
+    </div>
+  );
+}
 
 function App() {
   return (
     <>
       <Header />
+
+      <Card title={"Profile"}>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis inventore suscipit adipisci accusamus recusandae veritatis quasi cupiditate praesentium illo? Debitis officia dolorum repellat vitae rerum in iusto illum tempora impedit.
+      </p>
+      </Card>
+
       <Footer />
+      
     </>
-  )
+  );
 }
 
 
