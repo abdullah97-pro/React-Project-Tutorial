@@ -1,53 +1,64 @@
-
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Loginform from './components/LoginForm'
-
-function PageLayout({header,content,footer}) {
-  return (
-    <>
-      <header>{header}</header>
-      <main>{content}</main>
-      <footer>{footer}</footer>
-    </>
-  );
-}
-
-function Card({title, children}) {
-  return (
-    <div className="card">
-      <h1>{title}</h1>
-      {children}
-    </div>
-  );
-}
+import Welcome from "./components/Welcome";
 
 function App() {
   return (
     <>
-      {/* <Header /> */}
-
-      {/* <Card title={"Profile"}>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis inventore suscipit adipisci accusamus recusandae veritatis quasi cupiditate praesentium illo? Debitis officia dolorum repellat vitae rerum in iusto illum tempora impedit.
-      </p>
-      </Card> */}
-
-
-      {/* <Footer /> */}
-
-      <PageLayout 
-      header={<h1>Dashboard</h1>} 
-      content={<Card title={"Profile"}>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis inventore suscipit adipisci accusamus recusandae veritatis quasi cupiditate praesentium illo? Debitis officia dolorum repellat vitae rerum in iusto illum tempora impedit.
-      </p>
-      </Card>}
-      footer={<small>&copy; 2025</small>}></PageLayout>
-      
+      <Welcome />
     </>
   );
 }
+
+
+
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import Loginform from './components/LoginForm'
+
+// function PageLayout({header,content,footer}) {
+//   return (
+//     <>
+//       <header>{header}</header>
+//       <main>{content}</main>
+//       <footer>{footer}</footer>
+//     </>
+//   );
+// }
+
+// function Card({title, children}) {
+//   return (
+//     <div className="card">
+//       <h1>{title}</h1>
+//       {children}
+//     </div>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <>
+//       {/* <Header /> */}
+
+//       {/* <Card title={"Profile"}>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis inventore suscipit adipisci accusamus recusandae veritatis quasi cupiditate praesentium illo? Debitis officia dolorum repellat vitae rerum in iusto illum tempora impedit.
+//       </p>
+//       </Card> */}
+
+
+//       {/* <Footer /> */}
+
+//       <PageLayout 
+//       header={<h1>Dashboard</h1>} 
+//       content={<Card title={"Profile"}>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis inventore suscipit adipisci accusamus recusandae veritatis quasi cupiditate praesentium illo? Debitis officia dolorum repellat vitae rerum in iusto illum tempora impedit.
+//       </p>
+//       </Card>}
+//       footer={<small>&copy; 2025</small>}></PageLayout>
+      
+//     </>
+//   );
+// }
 
 
 // import { useState } from 'react';
