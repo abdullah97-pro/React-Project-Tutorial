@@ -1,13 +1,14 @@
 import Welcome from "./components/Welcome";
 import Counter from "./components/Counter";
 import UserProfile from "./components/UserProfile";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
-      <Welcome />
-      <Counter />
-      <UserProfile />
+      {/* <Welcome /> */}
+      {/* <Counter /> */}
+      <Form />
     </>
   );
 }
