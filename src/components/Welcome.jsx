@@ -1,7 +1,13 @@
+import { useState } from "react";
+
 function Welcome() {
-    return (
-        <h1>Welcome to React Developement</h1>
-    );
+  const [isOn, setIsOn] = useState(false);
+
+  return (
+    <button onClick={() => setIsOn(!isOn)}>
+      {isOn ? "ON" : "OFF"}
+    </button>
+  );
 }
 
 export default Welcome;
