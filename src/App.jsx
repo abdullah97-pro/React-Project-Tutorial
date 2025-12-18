@@ -1,11 +1,13 @@
 import Welcome from "./components/Welcome";
 import Counter from "./components/Counter";
+import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
     <>
       <Welcome />
       <Counter />
+      <UserProfile />
     </>
   );
 }
