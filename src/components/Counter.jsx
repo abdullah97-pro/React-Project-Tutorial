@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Counter() {
     const [count, setCount] = useState(0);
+    useEffect(() => {
+        console.log("Counter ",count);
+    },[count]);
 
     return (
         <>
