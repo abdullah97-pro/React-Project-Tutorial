@@ -2,13 +2,15 @@ import Welcome from "./components/Welcome";
 import Counter from "./components/Counter";
 import UserProfile from "./components/UserProfile";
 import Form from "./components/Form";
+import User from "./components/Users";
 
 function App() {
   return (
     <>
       {/* <Welcome /> */}
-      <Counter />
+      {/* <Counter /> */}
       {/* <Form /> */}
+      <User />
     </>
   );
 }
