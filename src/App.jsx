@@ -5,6 +5,7 @@ import Form from "./components/Form";
 import User from "./components/Users";
 import Timer from "./components/Timer";
 import WindowSize from "./components/WindowSize";
+import FocusInput from "./components/FocusInput";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <User /> */}
       {/* <Timer /> */}
       {/* <WindowSize /> */}
+      <FocusInput />
     </>
   );
 }
