@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import UserProfile from "./components/UserProfile";
 import Form from "./components/Form";
 import User from "./components/Users";
+import Timer from "./components/Timer";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <Welcome /> */}
       {/* <Counter /> */}
       {/* <Form /> */}
-      <User />
+      {/* <User /> */}
+      <Timer />
     </>
   );
 }
