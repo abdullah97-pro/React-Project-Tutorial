@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 
-import { useRef } from "react";
+// import { useRef } from "react";
 
 // function Timer() {
 //   const [time, setTime] = useState(0);
@@ -17,25 +17,46 @@ import { useRef } from "react";
 // }
 // export default Timer;
 
+// function Timer() {
+//   const intervalRef = useRef(null);
+
+//   const start = () => {
+//     intervalRef.current = setInterval(() => {
+//       console.log("Running...");
+//     }, 1000);
+//   }
+
+//   const stop = () => {
+//     clearInterval(intervalRef.current);
+//   }
+
+//   return (
+//     <>
+//       <button onClick={start}>Start</button>
+//       <button onClick={stop}>Stop</button>
+//     </>
+//   );
+// }
+
+
+import { forwardRef, useRef } from "react";
+
+const Input = forwardRef((props, ref) => {
+  return <input ref={ref} />;
+});
+
 function Timer() {
-  const intervalRef = useRef(null);
-
-  const start = () => {
-    intervalRef.current = setInterval(() => {
-      console.log("Running...");
-    }, 1000);
-  }
-
-  const stop = () => {
-    clearInterval(intervalRef.current);
-  }
+  const inputRef = useRef(null);
 
   return (
     <>
-      <button onClick={start}>Start</button>
-      <button onClick={stop}>Stop</button>
+      <Input ref={inputRef} />
+      <button onClick={() => inputRef.current.focus()}>
+        Focus Child Input
+      </button>
     </>
   );
 }
+
 
 export default Timer;
