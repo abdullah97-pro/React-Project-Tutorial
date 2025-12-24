@@ -7,6 +7,7 @@ import Timer from "./components/Timer";
 import WindowSize from "./components/WindowSize";
 import FocusInput from "./components/FocusInput";
 import RenderCounter from "./components/RenderCounter";
+import PreviousValue from "./components/PreviousValue";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <Timer /> */}
       {/* <WindowSize /> */}
       {/* <FocusInput /> */}
-      <RenderCounter />
+      {/* <RenderCounter /> */}
+      <PreviousValue />
     </>
   );
 }
