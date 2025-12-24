@@ -16,11 +16,11 @@ function App() {
       {/* <Counter /> */}
       {/* <Form /> */}
       {/* <User /> */}
-      {/* <Timer /> */}
+      <Timer />
       {/* <WindowSize /> */}
       {/* <FocusInput /> */}
       {/* <RenderCounter /> */}
-      <PreviousValue />
+      {/* <PreviousValue /> */}
     </>
   );
 }
