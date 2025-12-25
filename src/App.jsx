@@ -13,7 +13,11 @@ import { useMemo, useState } from "react";
 function App() {
   const [count, setCount] = useState(0);
 
-  const total = slowCalculation(count);
+  // const total = slowCalculation(count);
+
+  const total = useMemo(() => {
+    return slowCalculation(count);
+  },[count]);
 
   return (
     <>
