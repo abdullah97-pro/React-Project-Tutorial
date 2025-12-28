@@ -8,53 +8,67 @@ import WindowSize from "./components/WindowSize";
 import FocusInput from "./components/FocusInput";
 import RenderCounter from "./components/RenderCounter";
 import PreviousValue from "./components/PreviousValue";
-import { useMemo, useState } from "react";
+// import UserList from "./components/UserList";
+
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  // const total = slowCalculation(count);
-
-  const total = useMemo(() => {
-    return slowCalculation(count);
-  },[count]);
-
   return (
     <>
-      <p>Total: {total}</p>
-      <button onClick={() => setCount(count + 1)}>Increase</button>
+      {/* <Welcome /> */}
+      {/* <Counter /> */}
+      {/* <Form /> */}
+      <User />
+      {/* <Timer /> */}
+      {/* <WindowSize /> */}
+      {/* <FocusInput /> */}
+      {/* <RenderCounter /> */}
+      {/* <PreviousValue /> */}
+      {/* <UserList /> */}
     </>
   );
 }
 
-function slowCalculation(num) {
-  console.log('calculating...');
 
-  let result = 0;
-  for (let i = 0; i < num * 10; i++) {
-    result += Math.random();
-  }
 
-  return result;
-  
-}
 
+
+
+
+
+
+// import { useMemo, useState } from "react";
 
 // function App() {
+//   const [count, setCount] = useState(0);
+
+//   // const total = slowCalculation(count);
+
+//   const total = useMemo(() => {
+//     return slowCalculation(count);
+//   },[count]);
+
 //   return (
 //     <>
-//       {/* <Welcome /> */}
-//       {/* <Counter /> */}
-//       {/* <Form /> */}
-//       {/* <User /> */}
-//       <Timer />
-//       {/* <WindowSize /> */}
-//       {/* <FocusInput /> */}
-//       {/* <RenderCounter /> */}
-//       {/* <PreviousValue /> */}
+//       <p>Total: {total}</p>
+//       <button onClick={() => setCount(count + 1)}>Increase</button>
 //     </>
 //   );
 // }
+
+// function slowCalculation(num) {
+//   console.log('calculating...');
+
+//   let result = 0;
+//   for (let i = 0; i < num * 10; i++) {
+//     result += Math.random();
+//   }
+
+//   return result;
+  
+// }
+
+
+
 
 
 

@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
+import UserList from "./UserList";
 
 function User() {
     const [users, setUsers] = useState([]);
@@ -10,13 +11,14 @@ function User() {
     },[]);
 
     return (
-        <ul>
-            {
-                users.map(user => (
-                    <li key={user.id}>{user.name}</li>
-                ))
-            }
-        </ul>
+        // <ul>
+        //     {
+        //         users.map(user => (
+        //             <li key={user.id}>{user.name}</li>
+        //         ))
+        //     }
+        // </ul>
+        <UserList users={users} />
     );
 }
 
