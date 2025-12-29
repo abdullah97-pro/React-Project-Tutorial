@@ -29,28 +29,53 @@ import PreviousValue from "./components/PreviousValue";
 // }
 
 
-import { memo, useState } from "react";
+import { useState, useCallback, memo } from "react";
 
-const Button = memo(({ onClick }) => {
-  console.log("Button rendered");
-  return <button onClick={onClick}>Click</button>;
+const TaskButton = memo(({ onAdd }) => {
+  return <button onClick={onAdd}>Add Task</button>;
 });
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [tasks, setTasks] = useState([]);
 
-  const handleClick = useCallback(() => {
-    console.log("Clicked");
+  const addTask = useCallback(() => {
+    setTasks(prev => [...prev, `Task ${prev.length + 1}`]);
   }, []);
 
   return (
     <>
-      <p>{count}</p>
-      <Button onClick={handleClick} />
-      <button onClick={() => setCount(count + 1)}>Update Count</button>
+      <TaskButton onAdd={addTask} />
+      <ul>
+        {tasks.map((task, i) => <li key={i}>{task}</li>)}
+      </ul>
     </>
   );
 }
+
+
+
+// import { memo, useState } from "react";
+
+// const Button = memo(({ onClick }) => {
+//   console.log("Button rendered");
+//   return <button onClick={onClick}>Click</button>;
+// });
+
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   const handleClick = useCallback(() => {
+//     console.log("Clicked");
+//   }, []);
+
+//   return (
+//     <>
+//       <p>{count}</p>
+//       <Button onClick={handleClick} />
+//       <button onClick={() => setCount(count + 1)}>Update Count</button>
+//     </>
+//   );
+// }
 
 
 // import { useState, useCallback } from "react";
