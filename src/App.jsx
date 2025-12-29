@@ -29,22 +29,46 @@ import PreviousValue from "./components/PreviousValue";
 // }
 
 
-import { useState, useCallback } from "react";
+import { memo, useState } from "react";
+
+const Button = memo(({ onClick }) => {
+  console.log("Button rendered");
+  return <button onClick={onClick}>Click</button>;
+});
 
 function App() {
   const [count, setCount] = useState(0);
 
-  const increment = useCallback(() => {
-    setCount(prev => prev + 1);
+  const handleClick = useCallback(() => {
+    console.log("Clicked");
   }, []);
 
   return (
     <>
-    <p>{count}</p>
-      <button onClick={increment}>Increase</button>
+      <p>{count}</p>
+      <Button onClick={handleClick} />
+      <button onClick={() => setCount(count + 1)}>Update Count</button>
     </>
   );
 }
+
+
+// import { useState, useCallback } from "react";
+
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   const increment = useCallback(() => {
+//     setCount(prev => prev + 1);
+//   }, []);
+
+//   return (
+//     <>
+//     <p>{count}</p>
+//       <button onClick={increment}>Increase</button>
+//     </>
+//   );
+// }
 
 
 
