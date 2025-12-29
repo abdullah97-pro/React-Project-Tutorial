@@ -11,19 +11,37 @@ import PreviousValue from "./components/PreviousValue";
 // import UserList from "./components/UserList";
 
 
+// function App() {
+//   return (
+//     <>
+//       {/* <Welcome /> */}
+//       {/* <Counter /> */}
+//       {/* <Form /> */}
+//       <User />
+//       {/* <Timer /> */}
+//       {/* <WindowSize /> */}
+//       {/* <FocusInput /> */}
+//       {/* <RenderCounter /> */}
+//       {/* <PreviousValue /> */}
+//       {/* <UserList /> */}
+//     </>
+//   );
+// }
+
+
+import { useState, useCallback } from "react";
+
 function App() {
+  const [count, setCount] = useState(0);
+
+  const increment = useCallback(() => {
+    setCount(prev => prev + 1);
+  }, []);
+
   return (
     <>
-      {/* <Welcome /> */}
-      {/* <Counter /> */}
-      {/* <Form /> */}
-      <User />
-      {/* <Timer /> */}
-      {/* <WindowSize /> */}
-      {/* <FocusInput /> */}
-      {/* <RenderCounter /> */}
-      {/* <PreviousValue /> */}
-      {/* <UserList /> */}
+    <p>{count}</p>
+      <button onClick={increment}>Increase</button>
     </>
   );
 }
