@@ -10,6 +10,7 @@ import RenderCounter from "./components/RenderCounter";
 import PreviousValue from "./components/PreviousValue";
 // import UserList from "./components/UserList";
 import ControlledForm from "./components/ControlledForm";
+import UncontrolledForm from "./components/UncontrolledForm";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       {/* <PreviousValue /> */}
       {/* <UserList /> */}
       <ControlledForm/>
+      <UncontrolledForm />
     </>
   );
 }
