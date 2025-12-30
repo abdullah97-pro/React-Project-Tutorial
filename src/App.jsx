@@ -9,48 +9,49 @@ import FocusInput from "./components/FocusInput";
 import RenderCounter from "./components/RenderCounter";
 import PreviousValue from "./components/PreviousValue";
 // import UserList from "./components/UserList";
-
-
-// function App() {
-//   return (
-//     <>
-//       {/* <Welcome /> */}
-//       {/* <Counter /> */}
-//       {/* <Form /> */}
-//       <User />
-//       {/* <Timer /> */}
-//       {/* <WindowSize /> */}
-//       {/* <FocusInput /> */}
-//       {/* <RenderCounter /> */}
-//       {/* <PreviousValue /> */}
-//       {/* <UserList /> */}
-//     </>
-//   );
-// }
-
-
-import { useState, useCallback, memo } from "react";
-
-const TaskButton = memo(({ onAdd }) => {
-  return <button onClick={onAdd}>Add Task</button>;
-});
+import ControlledForm from "./components/ControlledForm";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
-
-  const addTask = useCallback(() => {
-    setTasks(prev => [...prev, `Task ${prev.length + 1}`]);
-  }, []);
-
   return (
     <>
-      <TaskButton onAdd={addTask} />
-      <ul>
-        {tasks.map((task, i) => <li key={i}>{task}</li>)}
-      </ul>
+      {/* <Welcome /> */}
+      {/* <Counter /> */}
+      {/* <Form /> */}
+      {/* <User /> */}
+      {/* <Timer /> */}
+      {/* <WindowSize /> */}
+      {/* <FocusInput /> */}
+      {/* <RenderCounter /> */}
+      {/* <PreviousValue /> */}
+      {/* <UserList /> */}
+      <ControlledForm/>
     </>
   );
 }
+
+
+// import { useState, useCallback, memo } from "react";
+
+// const TaskButton = memo(({ onAdd }) => {
+//   return <button onClick={onAdd}>Add Task</button>;
+// });
+
+// function App() {
+//   const [tasks, setTasks] = useState([]);
+
+//   const addTask = useCallback(() => {
+//     setTasks(prev => [...prev, `Task ${prev.length + 1}`]);
+//   }, []);
+
+//   return (
+//     <>
+//       <TaskButton onAdd={addTask} />
+//       <ul>
+//         {tasks.map((task, i) => <li key={i}>{task}</li>)}
+//       </ul>
+//     </>
+//   );
+// }
 
 
 
