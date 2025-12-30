@@ -12,6 +12,7 @@ import PreviousValue from "./components/PreviousValue";
 import ControlledForm from "./components/ControlledForm";
 import UncontrolledForm from "./components/UncontrolledForm";
 import FruitList from "./components/FruitList";
+import Message from "./components/Message";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       {/* <ControlledForm/>
       <UncontrolledForm /> */}
       <FruitList />
+      <Message isLoggedIn = "" />
     </>
   );
 }
