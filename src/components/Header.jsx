@@ -5,8 +5,9 @@
 //         </div>
 //     )
 // }
-import './css/header.css'
-import styles from './css/Header.module.css'
+import './css/header.css';
+import styles from './css/Header.module.css';
+
 
 function Header({header,content}) {
     return (
