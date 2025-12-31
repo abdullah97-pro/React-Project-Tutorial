@@ -5,7 +5,7 @@
 //         </div>
 //     )
 // }
-
+import './css/header.css'
 function Header({header,content}) {
     return (
         <>
