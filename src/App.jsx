@@ -14,6 +14,7 @@ import UncontrolledForm from "./components/UncontrolledForm";
 import FruitList from "./components/FruitList";
 import Message from "./components/Message";
 import Button from "./components/Button";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -32,7 +33,10 @@ function App() {
       <UncontrolledForm /> */}
       {/* <FruitList />
       <Message isLoggedIn = "" /> */}
-      <Button text="Props Drilling"/>
+      {/* <Button/> */}
+      <Header>
+        <h1>Composition Pattern </h1>
+      </Header>
     </>
   );
 }

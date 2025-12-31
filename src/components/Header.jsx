@@ -1,5 +1,9 @@
-function Header({text}) {
-    return <h1>{text}</h1>
+function Header({children}) {
+    return (
+        <div className="box">
+            {children}
+        </div>
+    )
 }
 
 export default Header;
