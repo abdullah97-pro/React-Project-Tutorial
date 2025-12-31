@@ -1,5 +1,5 @@
-function Header() {
-    return <h1>Header of Web page</h1>
+function Header({text}) {
+    return <h1>{text}</h1>
 }
 
 export default Header;

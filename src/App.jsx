@@ -13,6 +13,7 @@ import ControlledForm from "./components/ControlledForm";
 import UncontrolledForm from "./components/UncontrolledForm";
 import FruitList from "./components/FruitList";
 import Message from "./components/Message";
+import Button from "./components/Button";
 
 function App() {
   return (
@@ -29,8 +30,9 @@ function App() {
       {/* <UserList /> */}
       {/* <ControlledForm/>
       <UncontrolledForm /> */}
-      <FruitList />
-      <Message isLoggedIn = "" />
+      {/* <FruitList />
+      <Message isLoggedIn = "" /> */}
+      <Button text="Props Drilling"/>
     </>
   );
 }
