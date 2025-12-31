@@ -34,9 +34,10 @@ function App() {
       {/* <FruitList />
       <Message isLoggedIn = "" /> */}
       {/* <Button/> */}
-      <Header>
+      {/* <Header>
         <h1>Composition Pattern </h1>
-      </Header>
+      </Header> */}
+      <Header header="Header" content="Dashboard" />
     </>
   );
 }

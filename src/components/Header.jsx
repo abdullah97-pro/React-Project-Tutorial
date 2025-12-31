@@ -1,8 +1,17 @@
-function Header({children}) {
+// function Header({children}) {
+//     return (
+//         <div className="box">
+//             {children}
+//         </div>
+//     )
+// }
+
+function Header({header,content}) {
     return (
-        <div className="box">
-            {children}
-        </div>
+        <>
+        <header>{header}</header>
+        <main>{content}</main>
+        </>
     )
 }
 
