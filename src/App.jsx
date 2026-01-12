@@ -1,3 +1,5 @@
+import {Routes, Route} from "react-router-dom";
+
 import Welcome from "./components/Welcome";
 import Counter from "./components/Counter";
 import UserProfile from "./components/UserProfile";
@@ -37,7 +39,13 @@ function App() {
       {/* <Header>
         <h1>Composition Pattern </h1>
       </Header> */}
-      <Header header="Header" content="Dashboard" />
+      {/* <Header header="Header" content="Dashboard" /> */}
+
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/form" element={<Form />} />
+      </Routes>
     </>
   );
 }
