@@ -45,12 +45,13 @@ function App() {
       {/* <Header header="Header" content="Dashboard" /> */}
 
       <Routes>
-        {/* <Route path="/" element={<Welcome />} />
+        <Route path="/" element={<Welcome />} />
         <Route path="/user" element={<User />} />
-        <Route path="/form" element={<Form />} /> */}
-        <Route path="/dashboard" element={<Dashboard />}>
-        <Route path="settings" element={<Settings />} />
-      </Route>
+        <Route path="/form" element={<Form />} />
+
+        {/* <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="settings" element={<Settings />} />
+        </Route> */}
 
       </Routes>
 
