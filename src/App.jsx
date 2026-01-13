@@ -17,6 +17,9 @@ import FruitList from "./components/FruitList";
 import Message from "./components/Message";
 import Button from "./components/Button";
 import Header from "./components/Header";
+import Dashboard from "./components/pages/Dashboard";
+import Settings from "./components/pages/Settings";
+
 
 function App() {
   return (
@@ -42,10 +45,17 @@ function App() {
       {/* <Header header="Header" content="Dashboard" /> */}
 
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        {/* <Route path="/" element={<Welcome />} />
         <Route path="/user" element={<User />} />
-        <Route path="/form" element={<Form />} />
+        <Route path="/form" element={<Form />} /> */}
+        <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="settings" element={<Settings />} />
+      </Route>
+
       </Routes>
+
+      
+
     </>
   );
 }
