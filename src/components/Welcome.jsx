@@ -16,8 +16,8 @@ function Welcome() {
   return(
     <>
     <h1>Welcome page</h1>
-    <Link to="/user">User</Link>
-    <Link to="/form">Form</Link>
+    <Link to="/dashboard">Dashboard</Link>
+    {/* <Link to="/form">Form</Link> */}
     </>
   );
 }

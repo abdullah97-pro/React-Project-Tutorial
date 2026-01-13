@@ -19,7 +19,7 @@ import Button from "./components/Button";
 import Header from "./components/Header";
 import Dashboard from "./components/pages/Dashboard";
 import Settings from "./components/pages/Settings";
-
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -46,8 +46,18 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/form" element={<Form />} />
+        {/* <Route path="/user" element={<User />} /> */}
+        <Route path="/login" element={<Form />} />
+
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+
 
         {/* <Route path="/dashboard" element={<Dashboard />}>
           <Route path="settings" element={<Settings />} />
